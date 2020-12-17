@@ -37,10 +37,11 @@ def uniqueUpdate(data1, data2):
     dupKeys = {}
 
     # Examine every (k, v2) pair in data2
-    for [k, v2] in data2:
+    for [k, v2] in data2.items():
         # Check if there is a key-value
         # pair with key = k in data1
-        if k in data1:
+        if k in data1
+            
             v1 = data1[k]
             # (k, v1) in dict1
             # Check if v1 != v2
@@ -53,9 +54,9 @@ def uniqueUpdate(data1, data2):
             else:
                 # Add (k, v2) to data1
                 data1[k] = v2
-    # After processing all (k, v2) in
+     # After processing all (k, v2) in
     # data2, return the dictionary
-    return dupKeys
+                return dupKeys
 
 '''
 Visualize this function on an example:
@@ -97,17 +98,17 @@ if __name__ == '__main__':
     n1 = int(input())
     for _ in range(n1):
         k, v = map(int, input().split())
-        if k in data1:
+        for [k1,v1] in data1:
             sys.exit("Illegal: data1")
-        data1[k] = v
+        data1.append([k,v]) 
     data2 = []
     n2 = int(input())
     for _ in range(n2):
         k, v = map(int, input().split())
-        for [k2, v2] in data2:
-            if k2 == k:
-                sys.exit("Illegal: data2")
-        data2.append([k, v])
+        if k in data2:
+           
+               sys.exit("Illegal: data2")
+        data2[k]=v
     dup = uniqueUpdate(data1, data2)
     print(data1)
     print(data2)
